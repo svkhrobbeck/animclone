@@ -1,0 +1,29 @@
+.anime-page__title {
+  @include forTitle(h1);
+  color: $white;
+}
+
+.anime-page__subtitle {
+  @include forTitle(h2);
+  color: $white;
+  margin-bottom: 20px;
+}
+
+.anime-page__iframe {
+  border: none;
+  width: 100%;
+  height: auto;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+.anime-page__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.anime-page__button {
+  flex-grow: 1;
+  user-select: none;
+}

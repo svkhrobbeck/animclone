@@ -1,0 +1,31 @@
+.button {
+  display: inline-block;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  background-color: transparent;
+
+  &--orange {
+    background-color: $orange;
+    padding: 4px 11px;
+    border-radius: 5px;
+  }
+
+  &--outline-orange {
+    background-color: $black;
+    border-color: $orange;
+    color: $white;
+  }
+
+  &--big {
+    font-size: 20px;
+    padding: 8px 13px;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+*:focus {
+  outline: 2px dashed $orange;
+  outline-offset: 3px;
+}
+
+body {
+  min-height: 100%;
+  background-color: $white;
+  font-family: Inter, "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  &.site-bg-img {
+    background: url("../images/bg_img.jpg") no-repeat center / cover fixed;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+    }
+  }
+
+  &.dark {
+    background-color: $grey;
+  }
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 34px 0 40px;
+}
+
+.logo {
+  display: flex;
+}

@@ -1,0 +1,97 @@
+.search-dropdown {
+  position: absolute;
+  padding: 30px 9px 10px;
+  background-color: $white;
+  border: 3px solid $orange;
+  width: 100%;
+  top: calc(100% + 18px);
+  left: 0;
+  border-radius: 0 0 7px 7px;
+  border-top: none;
+
+  &--hidden {
+    display: none;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    top: calc(100% + 3px);
+    width: calc(100% - 18px);
+    left: 9px;
+  }
+}
+
+.search-dropdown__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 270px;
+  overflow-y: auto;
+
+  @media only screen and (max-width: $mobile) {
+    height: 210px;
+  }
+}
+
+.search-dropdown__close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  top: 5px;
+  right: 30px;
+  width: 20px;
+  height: 20px;
+
+  @media only screen and (max-width: $mobile) {
+    top: 10px;
+    right: 20px;
+  }
+}
+
+.search-dropdown__close-img {
+  width: 18px;
+  height: 18px;
+}
+
+.search-dropdown__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}
+
+.search-dropdown__link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.search-dropdown__img {
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+.search-dropdown__anime-name {
+  color: $black;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.search-dropdown__not-found {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-70%);
+  font-size: 22px;
+  white-space: nowrap;
+  text-align: center;
+}

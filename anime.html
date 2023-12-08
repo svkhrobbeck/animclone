@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>anime</title>
+  </head>
+  <body class="dark">
+    <!-- header -->
+    <header class="header">
+      <div class="container header__container">
+        <a class="header__logo logo" href="/">
+          <img
+            class="logo__img"
+            src="/images/logo.svg"
+            alt="animexona logo"
+            width="164"
+            height="19"
+          />
+        </a>
+        <form class="header__form search-form" id="search-form">
+          <input
+            class="search-form__input"
+            type="text"
+            placeholder="qidirish..."
+          />
+
+          <div
+            class="search-form__dropdown search-dropdown search-dropdown--hidden"
+          >
+            <button
+              class="search-dropdown__close-btn button"
+              id="search-dropdown-close"
+              type="button"
+            >
+              <img
+                class="search-dropdown__close-img"
+                src="/images/close.svg"
+                alt="icon close"
+                width="20"
+                height="20"
+              />
+            </button>
+            <div class="search-dropdown__inner" id="search-dropdown"></div>
+          </div>
+        </form>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <main class="main-content">
+      <section class="anime-page container">
+        <h1 class="anime-page__title" id="title-anime"></h1>
+        <iframe
+          class="anime-page__iframe"
+          allowfullscreen
+          id="iframe-anime"
+          src=""
+        ></iframe>
+        <h2 class="anime-page__subtitle" id="subtitle-anime"></h2>
+        <div class="anime-page__buttons" id="buttons-anime"></div>
+        <div class="select-wrapper">
+          <select id="anime-select"></select>
+          <a
+            class="button--orange button--hidden"
+            id="download-btn"
+            target="_blank"
+            >yuklab olish</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/anime.js"></script>
+  </body>
+</html>

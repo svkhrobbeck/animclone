@@ -1,0 +1,19 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/general";
+@import "helpers/common";
+@import "helpers/container";
+
+@import "blocks/buttons";
+@import "blocks/header";
+@import "blocks/search-form";
+@import "blocks/search-dropdown";
+@import "blocks/card";
+@import "blocks/home-page";
+@import "blocks/anime-page";
+
+.select-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}

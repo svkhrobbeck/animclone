@@ -1,0 +1,81 @@
+.card {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid $orange;
+  box-shadow: 0px 0px 10px 10px rgba($color: $black, $alpha: 0.3);
+
+  &:hover {
+    .card__img-wrapper::before {
+      opacity: 1;
+    }
+
+    .card__bottom {
+      bottom: -100%;
+    }
+
+    .card__title {
+      color: $white;
+    }
+  }
+
+  @media only screen and (max-width: $mobile) {
+    max-width: 150px;
+  }
+}
+
+.card__link {
+  position: absolute;
+  inset: 0;
+  z-index: 40;
+}
+
+.card__img-wrapper {
+  position: relative;
+  display: flex;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.83);
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    opacity: 0;
+    transition: $transition;
+  }
+}
+
+.card__img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+}
+
+.card__bottom {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: 0;
+  left: 0;
+  background-color: $white;
+  transition: $transition;
+}
+
+.card__title {
+  @include forTitle(h4);
+  @include lineLimit(1);
+  margin-bottom: 0;
+  position: absolute;
+  overflow: hidden;
+  bottom: 5px;
+  left: 10px;
+  color: $black;
+  z-index: 30;
+  transition: $transition;
+}
